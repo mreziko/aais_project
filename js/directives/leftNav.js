@@ -1,6 +1,4 @@
-/**
- * Created by akc on 9/22/16.
- */
+
 
 angular.module('shopping_cart').directive('navBar', function(){
     return{

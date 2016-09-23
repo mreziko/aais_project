@@ -12,9 +12,32 @@
 
 
     <nav-bar></nav-bar>
-    <div nav-bar> </div>
+    
 
 </div>
+    
+    <div ng-controller="products_controller">
+        
+        
+        <div item-list></div>
+        
+        
+        
+        
+<!--
+    <ol> 
+    <li ng-repeat="product in productList">     
+    {{product.prod_name}}
+        {{product.price}}
+        
+        
+        </li>
+        
+        
+        </ol>
+-->
+    
+    </div>
 
 
 
@@ -38,6 +61,9 @@
 <script type="text/javascript" src="/js/controllers/home_controller.js"></script>
 <script type="text/javascript" src="/js/services/product_type_service.js"></script>
 <script type="text/javascript" src="/js/directives/leftNav.js"></script>
+<script type="text/javascript" src="/js/directives/itemList.js"></script>    
+<script type="text/javascript" src="/js/controllers/product_list_controller.js"></script>
+<script type="text/javascript" src="/js/services/product_list_service.js"></script>    
 
 
 
