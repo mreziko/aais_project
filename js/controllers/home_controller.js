@@ -10,8 +10,14 @@ angular.module("shopping_cart").controller("home_controller",["$scope", "product
     
     
     
-        console.log("FROM CONTROLLER for inventory_type");
-        console.log(product_type_service.productTypes);
+       // console.log("FROM CONTROLLER for inventory_type");
+    
+    
+       // console.log(product_type_service.productTypes);
+    
+    
+    
+    
         $scope.$watch(function(){
             return product_type_service.productTypes;
         },function(newVal,oldVal){
@@ -26,8 +32,14 @@ angular.module("shopping_cart").controller("home_controller",["$scope", "product
 
         });
     
-      console.log("FROM CONTROLLER for inventorytype_ids");
-        console.log(product_list_service.productListIds);
+    
+    
+    //below was from previous code
+    
+    //  console.log("FROM CONTROLLER for inventorytype_ids");
+       // console.log(product_list_service.productListIds);
+    
+    
         $scope.$watch(function(){
             return product_list_service.productListIds;
         },function(newVal,oldVal){
@@ -44,11 +56,31 @@ angular.module("shopping_cart").controller("home_controller",["$scope", "product
     
     
     
-    $scope.call =function(id, description){
-        $scope.id=product_type_service.productTypes.id;
-        $scope.description=product_type_service.productTypes.description;
+    
+    
+   // this is the function to call the inventory_type for id and description as well as get the values from its foreign key from inventory table
+    
+    
+    
+     $scope.call =function(id, description){
+         
+             
 //        
-        product_list_service.getProductListIds();
+         product_type_service.id=id;
+        product_type_service.getProductTypeids();
+         
+         
+         product_list_service.id=id;
+         product_list_service.getProductListIds();
+         
+
+         console.log($scope.id);
+         console.log($scope.description);
+         
+         
+//         console.log(product_list_service.getProductListIds);
+         
+         
 //        
 //        $scope.title=description;
     }

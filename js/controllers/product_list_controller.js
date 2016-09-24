@@ -57,18 +57,18 @@ angular.module("shopping_cart").controller("products_controller", ["$scope", "pr
 //    
 //    
 //    
-  $scope.$watch(function(){
-  return product_list_service.productListIds; 
-  },function(newVal,oldVal){
-  if (oldVal != newVal){
-  console.log("FROM PRODUCT LIST");
-  console.log("NEW VAL")
-  console.log(newVal);
-  console.log("OLD VAL");
-  console.log(oldVal);
-  $scope.productListIds=newVal;
-  }
-});
+//  $scope.$watch(function(){
+//  return product_list_service.productListIds; 
+//  },function(newVal,oldVal){
+//  if (oldVal != newVal){
+//  console.log("FROM PRODUCT LIST");
+//  console.log("NEW VAL")
+//  console.log(newVal);
+//  console.log("OLD VAL");
+//  console.log(oldVal);
+//  $scope.productListIds=newVal;
+//  }
+//});
 //    
 //  console.log("PRODUCTS CONTROLLER");
 //    

@@ -1,8 +1,9 @@
 angular.module("shopping_cart").service("product_list_service", ["$http", function($http){
     
     //calling inventory (products)
-    this.productList="productList";
-    var plObject=this;
+   
+   
+   
     
     
     $http.get("/service/inventory").then(function(response){
@@ -15,22 +16,29 @@ angular.module("shopping_cart").service("product_list_service", ["$http", functi
     
    // calling inventory list by inventorytype_id
     
+    //this service is being called when clicked, invoking call() function
     
     
-    var pliobject = this;
-    this.productListIds = null;
+//    this.inventorytype_id = null;
+     var plObject=this;    
+    this.id=null;
     
     this.getProductListIds=function(){
-    var url ="/service/inventory/"+this.productListIds;    
+        
+      var url ="/service/inventory/"+plObject.id;     
+   
      
     
     $http.get(url).then(function(response){
+        
+        
         console.log("logging to inventory to get inventorytype_ids");
         console.log("End of response");
-        //this.productTypes={};
         
-        pliobject.productListIds= response.data;
-        console.log(pliobject.productListIds);
+        
+        plObject.productListIds= response.data;
+        
+        console.log(plObject.productListIds);
     });
     }
     

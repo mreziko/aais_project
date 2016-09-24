@@ -1,5 +1,5 @@
 <ol>
-     <li ng-repeat="productType in productTypes" ng-click="call(id, description)">
+     <li ng-repeat="productType in productTypes" ng-click="call(productType.id, productType.description)">
         {{productType.description}}
     </li>
        

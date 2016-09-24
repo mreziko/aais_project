@@ -4,41 +4,46 @@ angular.module("shopping_cart").service("product_type_service", ["$http", functi
     
     
     
+//     var obj =this;
+//    //calling inventory_type
+//    
+//    this.id=null;
     
-    //calling inventory_type
-    this.productTypes = "";
-    var obj =this;
+     var plObject=this;    
+    this.id=null;
     
-        $http.get("/service/inventory_type").then(function(response){
+   
+    
+    $http.get("/service/inventory_type").then(function(response){
         console.log("loggin just the response");
         console.log("End of response");
         //this.productTypes={};
 
-        obj.productTypes= response.data;
-        console.log(obj.productTypes);
+        plObject.productTypes= response.data;
+        console.log(plObject.productTypes);
     });
     
     
     
     //calling inventorytype_ids
     
+   
     
-    var ptiobject = this;
-    this.id=null;
-    
-    
+        
     
     this.getProductTypeids = function(){
-        var url = "/service/inventory_type/"+this.id;
+        var url = "/service/inventory_type/"+plObject.id;
     
     
     $http.get(url).then(function(response){
+        
+        
         console.log("logging to inventory_type_ids just the response");
         console.log("End of response");
         //this.productTypes={};
         
-        ptiobject.productTypeIds= response.data;
-        console.log(ptiobject.productTypeIds);
+        plObject.productTypeIds= response.data;
+        console.log(plObject.productTypeIds);
     });
     
     
