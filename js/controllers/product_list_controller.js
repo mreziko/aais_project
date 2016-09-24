@@ -114,20 +114,7 @@ angular.module("shopping_cart").controller("products_controller", ["$scope", "pr
 //    }
 //    
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
 //    $scope.call = function(id){
 //    
